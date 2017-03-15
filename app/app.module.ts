@@ -7,6 +7,8 @@ import { AppComponent }  from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
 import { StarComponent } from './shared/star.component';
+import { WelcomeComponent } from './home/welcome.component';
+import { ProductDetailComponent } from './products/product-detail.component';
 
 @NgModule({
   imports: [ 
@@ -18,7 +20,10 @@ import { StarComponent } from './shared/star.component';
     AppComponent,
     ProductListComponent,
     ProductFilterPipe,
-    StarComponent ],
+    StarComponent,
+    WelcomeComponent,
+    ProductDetailComponent
+    ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
