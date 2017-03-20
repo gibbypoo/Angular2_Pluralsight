@@ -3,7 +3,6 @@ import { IProduct } from './product';
 import { ProductService } from './product.service';
 
 @Component({
-    selector: 'pm-products',//directive name to be used in html
     moduleId: module.id,
     templateUrl: 'product-list.component.html',
     styleUrls: ['product-list.component.css']
@@ -28,11 +27,11 @@ export class ProductListComponent implements OnInit{
     }
 
     ngOnInit(): void {
-        //this.products = this._productService.getProducts();
         this._productService.getProducts()
             .subscribe(products => this.products = products,
             error => this.errorMessage = error);
     }
+    
 
     onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message;
